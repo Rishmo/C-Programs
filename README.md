@@ -38,6 +38,7 @@ Here is a list of some of the programs you’ll find in this repository:
 
 1. **Basic Programs**
     - Hello World
+    - Taking inputs
     - Factorial Calculator
     - Fibonacci Sequence Generator
     - Prime Number Checker
