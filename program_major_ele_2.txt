@@ -1,0 +1,45 @@
+class Solution {
+    public List<Integer> majorityElement(int[] nums) {
+        solve(nums);
+        {
+            int n=A.length;
+            Integer cand1=null;
+            Integer cand2=null;
+            int c1=0;
+            int c2=0;
+            for(int i=0; i<n; i++)
+            {
+                if(cand1!=null && A[i]==cand1)
+                    c1++;
+                else if(cand2!=null && A[i]==cand2)
+                    c2++;
+                else if(c1==0)
+                    cand1=A[i];
+                else if(c2==0)
+                    cand2=A[i]; 
+                else   
+                {
+                    c1--;
+                    c2--;
+                }
+
+            }
+            c1=0;
+            c2=0;
+            for(int i=0; i<n; i++)
+            {
+                if(cand1!=null && A[i]==cand1)
+                    c1++;
+                if(cand2!=null && A[i]==cand2)
+                    c2++;
+            }
+            ArrayList<Integer>res=new ArrayList<>();
+            if(c1>n/3)
+                res.add(cand1);
+            if(c2>n/3)
+                res.add(cand2);  
+            return res; 
+        }
+        
+    }
+}
